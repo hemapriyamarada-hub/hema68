@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nexora Systems</title>
+
+<style>
+body{
+font-family:Arial;
+margin:0;
+}
+
+header{
+background:#1e88e5;
+color:white;
+text-align:center;
+padding:20px;
+font-size:30px;
+}
+
+.hero{
+position:relative;
+text-align:center;
+color:white;
+}
+
+.hero img{
+width:100%;
+height:400px;
+object-fit:cover;
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:40px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+}
+
+.about{
+padding:40px;
+text-align:center;
+font-size:18px;
+}
+
+.image-track{
+overflow:hidden;
+white-space:nowrap;
+background:#f2f2f2;
+padding:20px;
+}
+
+.track img{
+width:220px;
+height:150px;
+margin:10px;
+border-radius:10px;
+}
+
+.box-container{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:40px;
+}
+
+.box{
+width:300px;
+border:2px solid black;
+padding:20px;
+border-radius:10px;
+}
+
+footer{
+background:#333;
+color:white;
+display:flex;
+justify-content:space-between;
+padding:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>Nexora Systems</header>
+
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<div class="hero-text">Innovating Digital Intelligence</div>
+</div>
+
+<div class="about">
+<h2>About Company</h2>
+<p>
+Nexora Systems is a technology company specializing in artificial intelligence,
+cloud infrastructure, and smart enterprise solutions. The company helps
+businesses transform digitally using scalable and intelligent platforms.
+</p>
+</div>
+
+<div class="image-track">
+<div class="track" id="track">
+
+<img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769">
+
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+
+</div>
+</div>
+
+<div class="box-container">
+
+<div class="box">
+<h3>Company Details</h3>
+Founded: 2015 <br>
+Employees: 850 <br>
+Industry: Artificial Intelligence & Cloud Computing
+</div>
+
+<div class="box">
+<h3>Company Directors</h3>
+CEO: Daniel Roberts <br>
+CTO: Olivia Chen
+</div>
+
+</div>
+
+<footer>
+
+<div>
+Name: Arjun Kumar <br>
+Contact: 9123456789 <br>
+Email: arjun@nexora.com <br>
+LinkedIn: linkedin.com/arjunkumar <br>
+GitHub: github.com/arjunkumar
+</div>
+
+<div>
+Street: Tech Park Road <br>
+Town: Hyderabad <br>
+District: Hyderabad <br>
+State: Telangana <br>
+Country: India
+</div>
+
+</footer>
+
+<script>
+
+let track = document.getElementById("track")
+
+let position = 0
+let direction = 1
+
+function move(){
+
+position += direction
+track.style.transform = "translateX("+position+"px)"
+
+if(position > 200 || position < -200){
+direction *= -1
+}
+
+}
+
+setInterval(move,30)
+
+</script>
+
+</body>
+</html>
